@@ -2,15 +2,15 @@
 
 import random
 
-#Here we define cards and the values as well
+#Here we define cards such as Hearts, Diamonds, Clubs, etc.... and alsp the values as well from 1 to 13
 SUITS = ["Hearts", "Diamonds", "Clubs", "Spades"]
 VALUES = list(range(1, 13))  # 1 to 12 (Ace to queen, King is removed)
 
-#We are building and shuffling the deck 
+#Here we are building and shuffling the deck using random.shuffle(deck)
 deck = [(suit, value) for suit in SUITS for value in VALUES]
 random.shuffle(deck)
 
-#Dealing 8 cards to each players hand 
+#Dealing 8 cards into each players hand (player 1 and player 2)
 player1_hand = [deck.pop() for _ in range(8)]
 player2_hand = [deck.pop() for _ in range(8)]
 
